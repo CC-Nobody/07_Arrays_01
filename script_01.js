@@ -61,18 +61,34 @@
 // ausgabe(str);
 
 /*  02b Funktionalität mit Arrays 2 *****/
-ausgabe(getSentenceArr2(["Ich","bin","Max","Mütze"]))
+ausgabe(getSentenceArr2(["Nobody","expects","the","Spanish","Inquisition"]))
 function getSentenceArr2(arr) {
     const gap = " ";
-    const dot = "."
+    const dot = ".";
+    const excl = "!"
     let str = "";
 
     for (let i = 0; i < arr.length-1; i++) {
         str += arr[i] + gap;
     }
-    for (let i = arr.length-1; i < arr.length; i++){
-        str += arr[i] + dot;     
+    for (let i = arr.length-1; i < arr.length; i++) {
+        str += arr[i] + excl;
     }
+    return str;
+}
+
+/* Challenge Mode */
+
+ausgabe(getSentenceArr3(["There","isn't","always","an","answer","for","everything"]))
+function getSentenceArr3(arr) {
+    const gap = " ";
+     const dot = "."
+     let str = "";
+
+     for (let i = 0; i < arr.length; i++) {
+        str += arr[i] + gap;
+    }
+    str = str.trimEnd(str) + dot;
     return str;
 }
 
@@ -113,4 +129,5 @@ function getSentence(word1,word2,word3,word4) {
 // ausgabe("hi"); 
 function ausgabe(outputStr) {
     console.log(outputStr);
+    alert(outputStr)
 }
