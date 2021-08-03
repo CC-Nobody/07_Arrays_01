@@ -24,9 +24,56 @@
 // }
 
 /* For-Schleife für Array-Index (Iteration) */
-let arr = ["Ich","bin","Jesus","Christus","ihr","Lappen"];
-for (let i = 0; i < arr.length; i++) {
-    ausgabe(arr[i]);
+//let arr = ["Ich","bin","Jesus","Christus","ihr","Lappen"];
+// for (let i = 0; i < arr.length; i++) {
+//     ausgabe(arr[i]);
+// }
+
+/**** Überlegungen - Transponierung* *****/
+
+// let a = 0;
+// ausgabe("Inhalt von a:" + a);
+// a = a +1
+// ausgabe("Inhalt von a:" + a);
+// a = a +1
+// ausgabe("Inhalt von a:" + a);
+// a = a +1
+// ausgabe("Inhalt von a:" + a);
+// a = a +1
+// ausgabe("Inhalt von a:" + a);
+// a = a +1
+// ausgabe("Inhalt von a:" + a);
+
+/* Besser: mit FOR-Schleife*/
+// let a = 0;
+// for (let i = 0; i < 5; i++) {
+//     ausgabe("Ausgabe aus der LOOP: " + a);
+//     a += 1;
+// }
+
+// let str = "";
+// const addStr = "Test";
+// const gap = " "
+// for (let i = 0; i < 5; i++) {
+//      str = str + gap + addStr;
+// }
+
+// ausgabe(str);
+
+/*  02b Funktionalität mit Arrays 2 *****/
+ausgabe(getSentenceArr2(["Ich","bin","Max","Mütze"]))
+function getSentenceArr2(arr) {
+    const gap = " ";
+    const dot = "."
+    let str = "";
+
+    for (let i = 0; i < arr.length-1; i++) {
+        str += arr[i] + gap;
+    }
+    for (let i = arr.length-1; i < arr.length; i++){
+        str += arr[i] + dot;     
+    }
+    return str;
 }
 
 /******  02a Funktionalität mit Arrays 1 *****/
