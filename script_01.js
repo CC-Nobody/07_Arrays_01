@@ -61,7 +61,7 @@
 // ausgabe(str);
 
 /*  02b Funktionalität mit Arrays 2 *****/
-ausgabe(getSentenceArr2(["Nobody","expects","the","Spanish","Inquisition"]))
+// ausgabe(getSentenceArr2(["Nobody","expects","the","Spanish","Inquisition"]))
 function getSentenceArr2(arr) {
     const gap = " ";
     const dot = ".";
@@ -79,7 +79,7 @@ function getSentenceArr2(arr) {
 
 /* Challenge Mode */
 
-ausgabe(getSentenceArr3(["There","isn't","always","an","answer","for","everything"]))
+// ausgabe(getSentenceArr3(["There","isn't","always","an","answer","for","everything"]))
 function getSentenceArr3(arr) {
     const gap = " ";
      const dot = "."
@@ -128,6 +128,24 @@ function getSentence(word1,word2,word3,word4) {
 // Modul: Ausgabe in Konsole
 // ausgabe("hi"); 
 function ausgabe(outputStr) {
-    console.log(outputStr);
-    alert(outputStr)
+    // console.log(outputStr);
+    // alert(outputStr)
+    return outputStr;
+}
+
+let a = getSentenceArr2(["Nobody","expects","the","Spanish","Inquisition"]) ;
+let b = getSentenceArr3(["There","isn't","always","an","answer","for","everything"]);
+
+function docWrite(outputStr) {
+    ausgabe(outputStr);
+    document.getElementById("quotedisplay").innerHTML = outputStr;
+}
+
+// Schlechte Lösung
+function docWrite1() {
+    ausgabe(getSentenceArr3(["There","isn't","always","an","answer","for","everything"]));
+}
+
+function docWrite2() {
+    ausgabe(getSentenceArr2(["Nobody","expects","the","Spanish","Inquisition"]));
 }

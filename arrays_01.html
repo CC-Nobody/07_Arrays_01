@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<script src="script_01.js"></script> 
     <head>
         <meta charset="UTF-8">
         <title>Prozedurale Programmierumg</title>
@@ -12,8 +13,30 @@
                 name="reload"
                 value="Refresh Page" 
                 onClick="window.location.reload()">reload</button>
+        
+        <button style="height:50px;width:200px;display:block;margin-top:10px" 
+                name="reload"
+                value="Refresh Page" 
+                onClick="window.docWrite(ausgabe(a))">Lösung 1</button>
+
+        <button style="height:50px;width:200px;display:block;margin-top:10px" 
+                name="reload"
+                value="Refresh Page" 
+                onClick="window.docWrite(ausgabe(b))">Lösung 2</button>
     </body>
     
     <!-- scripte  -->
-    <script src="script_01.js"></script> 
+
+
+    <div id="display" class="w3-container">
+        <h2> 
+            Ihr Array als Satz:
+            <div id="quotedisplay">
+            <script>
+                docWrite("Hier könnte Ihre Werbung Stehen")
+            </script>
+            </div>
+        </h2>
+    </div>
+
 </html>
